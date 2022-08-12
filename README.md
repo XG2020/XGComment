@@ -2,7 +2,7 @@
 #### 适用版本 typecho1.1.17.10.30
 
 - 其他版本需要修改插件文件夹目录下Plugin.php文件中的版本判断相关代码
-![-1a37355e6ff8aefd.png][https://www.xggm.top/usr/uploads/2022/07/2779981298.png]
+![-1a37355e6ff8aefd.png](https://www.xggm.top/usr/uploads/2022/07/2779981298.png)
 
 ## 功能说明
 
