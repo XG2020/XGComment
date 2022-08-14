@@ -84,6 +84,9 @@ class XGComment_Plugin implements Typecho_Plugin_Interface
         // 找回密码过期时间
         $public_expire = new Typecho_Widget_Helper_Form_Element_Text('public_expire', NULL, '10', _t('验证过期时间'), _t('当发起找回密码申请后，会有一封链接邮件，此处定义链接过期时间，单位为分钟'));
         $form->addInput($public_expire);
+        // 找回密码请求间隔时间
+        $public_rtime = new Typecho_Widget_Helper_Form_Element_Text('public_rtime', NULL, '180', _t('请求间隔时间'), _t('防止恶意请求，开启需要定制版typecho且删除Action.php中相关的代码注释，此处定义找回密码请求间隔时间，单位为秒'));
+        $form->addInput($public_rtime);
         // Debug模式
         $public_debug = new Typecho_Widget_Helper_Form_Element_Checkbox('public_debug', array('enable' => _t('启用Debug')), array('enable'), _t('是否启用Debug模式'), _t('启用后将在插件目录生成debug.txt文件，可记录邮件发送详细错误'));
         $form->addInput($public_debug);
