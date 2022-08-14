@@ -66,7 +66,7 @@ class XGComment_Action extends Widget_Abstract_Users implements Widget_Interface
             <script src="<?php $this->options->adminStaticUrl('js', 'html5shiv.js');?>"></script>
             <script src="<?php $this->options->adminStaticUrl('js', 'respond.js');?>"></script>
             <![endif]-->
-            <?php 
+             <?php 
                     $url = Helper::options()->pluginUrl . '/XGAdmin/static/';
                     $diycss = Typecho_Widget::widget('Widget_Options')->plugin('XGAdmin')->diycss;
                     $skin = Typecho_Widget::widget('Widget_Options')->plugin('XGAdmin')->bgfengge;
@@ -95,6 +95,7 @@ class XGComment_Action extends Widget_Abstract_Users implements Widget_Interface
         <![endif]-->
         <div class="typecho-login-wrap">
             <div class="typecho-login">
+                <!--<h1><a href="https://www.xggm.top" class="i-logo">XGGM</a></h1>-->
                 <img src="https://xggm.top/logo.png" height="80px">
                 <?php $form->render(); ?>
             </div>
@@ -287,6 +288,8 @@ class XGComment_Action extends Widget_Abstract_Users implements Widget_Interface
         }
         // 查询用户数据
         $user = $this->db->fetchRow($this->select()->where('mail = ?', $this->request->mail));
+        $now = time();
+        $retime = $user['rtime'];
         // 没有用户
         if ( !$user ) {
             // 输出错误
@@ -294,6 +297,18 @@ class XGComment_Action extends Widget_Abstract_Users implements Widget_Interface
             // 返回上一页
             $this->response->goBack();
         }
+        if ( $now<=$retime ) {
+            // 输出错误
+            $this->widget('Widget_Notice')->set(_t($this->request->mail.'您已经申请过重置密码请求，请稍后重试！'), 'error');
+            // 返回上一页
+            $this->response->goBack();
+        }
+        
+        // typecho定制版可删除注释，实现找回密码请求时间间隔
+//         $addtime = $this->_plugin->public_rtime ? $this->_plugin->public_rtime : 180;
+//         $setime = $now + $addtime;
+//         $this->update(array('rtime' => $setime), $this->db->sql()->where('mail = ?', $this->request->mail));
+        
         // 过期时间
         $expire = $this->_plugin->public_expire ? $this->_plugin->public_expire : 10;
         // 转换为秒数
