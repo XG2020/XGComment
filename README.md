@@ -50,11 +50,5 @@
 
 ----------
 
-> Github地址：https://github.com/XG2020/XGComment
-
-[card-default width="100%" label="下载地址"]
-[btn href="https://www.lanzoum.com/iUyeQ09gdtve" type="primary"]点击下载[/btn] **复制密码:** [copy]xggm[/copy] 
-[/card-default]
-
 
   [1]: https://www.xggm.top/usr/uploads/2022/07/2779981298.png
