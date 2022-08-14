@@ -41,7 +41,7 @@
 ----------
 
 
-##插件管理界面
+## 插件管理界面
 
 ![43417-t9c6zdaylr.png](https://www.xggm.top/usr/uploads/2022/08/3714260072.png)
 
