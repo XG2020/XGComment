@@ -1,17 +1,17 @@
-# XGComment
-
 > 本插件建议配合定制版typecho使用效果最佳
 
 #### 适用版本 typecho1.1.17.10.30
 
 - 其他版本需要修改插件文件夹目录下Plugin.php文件中的版本判断相关代码
-![-1a37355e6ff8aefd.png](https://www.xggm.top/usr/uploads/2022/07/2779981298.png)
+![-1a37355e6ff8aefd.png][1]
 
 ## 功能说明
+### 定制版Typecho可使用额外功能
+- 找回密码请求时间间隔设置，防止恶意请求
+![16421-0t2ifx44ct9g.png](https://www.xggm.top/usr/uploads/2022/08/1223188977.png)
 
 - 找回密码功能，通过邮件找回密码
 ![71182-70ky04ujkz9.png](https://www.xggm.top/usr/uploads/2022/07/2992549955.png)
-
 ![68060-7cya78zrf83.png](https://www.xggm.top/usr/uploads/2022/08/3226386662.png)
 
 - 评论审核通过时发送邮件给评论者
@@ -41,11 +41,20 @@
 ----------
 
 
-## 插件管理界面
+##插件管理界面
 
-![66862-qp5rti0esk.png](https://www.xggm.top/usr/uploads/2022/07/3961053157.png)
+![43417-t9c6zdaylr.png](https://www.xggm.top/usr/uploads/2022/08/3714260072.png)
 
-![21326-1secagcfz41.png](https://www.xggm.top/usr/uploads/2022/07/3850095348.png)
+![45112-jyqfcv098f.png](https://www.xggm.top/usr/uploads/2022/08/2321282562.png)
 
 
 ----------
+
+> Github地址：https://github.com/XG2020/XGComment
+
+[card-default width="100%" label="下载地址"]
+[btn href="https://www.lanzoum.com/iUyeQ09gdtve" type="primary"]点击下载[/btn] **复制密码:** [copy]xggm[/copy] 
+[/card-default]
+
+
+  [1]: https://www.xggm.top/usr/uploads/2022/07/2779981298.png
